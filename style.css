@@ -1,66 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&display=swap");
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
 body {
-  font-size: 15px;
-  color: hsla(0, 0%, 100%, 0.75);
-  background: hsl(0, 0%, 95%);
+  background: var(--Very-light-gray);
 }
 h1 {
   font-family: "Big Shoulders Display", cursive;
-  font-weight: 700px;
-  color: hsl(0, 0%, 95%);
+  font-weight: 700;
+  color: var(--Very-light-gray);
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
-.main {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px 50px 30px 30px;
+  margin: 10%;
   text-align: left;
 }
-.first-column {
-  background: hsl(31, 77%, 52%);
-  padding-left: 40px;
-  padding-top: 40px;
-  height: 380px;
-  width: 300px;
+.first-column,
+.second-column,
+.third-column {
+  height: 450px;
+  width: 250px;
+  padding-top: 3rem;
+  padding-left: 3rem;
   border: 1px solid transparent;
+}
+
+.first-column {
+  background: var(--Bright-orange);
   border-radius: 10px 0px 0px 10px;
 }
 .second-column {
-  background: hsl(184, 100%, 22%);
-  padding-top: 40px;
-  padding-left: 40px;
-  height: 380px;
-  width: 300px;
-  border: 1px solid transparent;
+  background: var(--Dark-cyan);
 }
 .third-column {
-  background: hsl(179, 100%, 13%);
-  padding-top: 40px;
-  padding-left: 40px;
-  height: 380px;
-  width: 300px;
-  border: 1px solid transparent;
+  background: var(--Very-dark-cyan);
   border-radius: 0px 10px 10px 0px;
 }
 img {
   height: 30px;
 }
 p {
-  line-height: 10px;
+  width: 200px;
+  line-height: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: hsla(0, 0%, 100%, 0.75);
+  color: var(--Transparent-white);
 }
 .learn-more {
-  margin-top: 50px;
+  margin-top: 5rem;
   margin-bottom: 50px;
   width: 130px;
   height: 50px;
   border-radius: 50px;
   border: 1px solid transparent;
   font-family: "Lexend Deca", sans-serif;
-  font-weight: 500px;
-  background-color: hsl(0, 0%, 95%);
+  font-weight: 500;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  main {
+    flex-direction: column;
+  }
+  .first-column {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .third-column {
+    border-radius: 0px 0px 10px 10px;
+  }
 }
